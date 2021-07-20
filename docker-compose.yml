@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    container_name: cigarettedisplay_databank
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - cigarettedisplay:/var/lib/mysql
+
+volumes:
+  cigarettedisplay:
